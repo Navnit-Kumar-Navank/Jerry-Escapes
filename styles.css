@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.body{
+    overflow: hidden;
+    position: relative;
+}
+
+.loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);;
+}
+
+.loader-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position:50% 40%;
+    background-image: url(/Assets/Game-Preloader-Image.png);
+}
+
+.loader-Text{
+    position: absolute;
+    top: 65%;
+    left: 42%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    background-color: #212121;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 2px 5px;
+}
+
+.loader-ani{
+    animation: contAni 1000ms 1;
+    /* animation-timing-function: cubic-bezier(1, 0, 0, 1); */
+    animation-timing-function: cubic-bezier(0.5, 0, 0, 2);
+}
+
+
+.element-container{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/Assets/background.jpg);
+    background-size: contain;
+    z-index: -100;
+}
+
+.gOver{
+    filter: blur(5px);
+}
+
+#t-img{
+    position: absolute;
+    background-image: url("/Assets/Tom_2.png");
+    background-size: 100% 100%;
+    width: 12em;
+    height: 15em;
+    bottom: 35px;
+    right: 5%;
+}
+
+#j-img{
+    position: absolute;
+    background-image: url("/Assets/Jerry_3.png");
+    background-size: 100% 100%;
+    height: 10em;
+    width: 10em;
+    left: 5%;
+    bottom: 35px;
+}
+
+.t-ani{
+    animation: tomAni 2000ms linear infinite;
+}
+
+.j-ani{
+    animation: jerryAni 700ms linear;
+}
+
+.score{
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    left: 47%;
+    top: 10px;
+    border: 2px solid green;
+    background-color: greenyellow;
+    border-radius: 5px;
+}
+
+.end-img{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(/Assets/Tom_Game-End-screen.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.end-imgText{
+    position: absolute;
+    top: 80%;
+    left: 40.1%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3.5em;
+    background-color: #212121;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 2px 5px;
+}
+
+@keyframes contAni {
+    
+    100%{
+        scale: 9000%;
+    }
+}
+@keyframes tomAni {
+    0%{
+        left: 130%;
+    }
+    100%{
+        left: -50%;
+    }
+}
+
+@keyframes jerryAni {
+    0% {
+        bottom: 35px;
+    }
+    
+    50% {
+        bottom: 450px;
+    }
+    100% {
+        bottom: 35px;
+    }
+}
